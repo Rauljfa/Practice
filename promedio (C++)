@@ -18,6 +18,15 @@ int _tmain(int argc, _TCHAR* argv[])
 	float pm;
 	pm = (a + b) / 2;
 	cout << "Su promedio es " << pm;
+	
+	if (pm >= 2.95)
+	{
+		cout << " Paso la materia";
+	}
+	else
+	{
+		cout << " Perdio la materia";
+	}
 	_getch();
 	return 0;
 }
