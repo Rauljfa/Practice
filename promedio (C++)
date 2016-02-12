@@ -1,0 +1,23 @@
+// ejemplo1.cpp: define el punto de entrada de la aplicación de consola.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+
+using namespace::std;
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	cout << "Digite primera nota ";
+	float a;
+	cin >> a;
+	cout << "Digite seguna nota ";
+	float b;
+	cin >> b;
+	float pm;
+	pm = (a + b) / 2;
+	cout << "Su promedio es " << pm;
+	_getch();
+	return 0;
+}
