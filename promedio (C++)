@@ -12,7 +12,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	cout << "Digite primera nota ";
 	float a;
 	cin >> a;
-	cout << "Digite seguna nota ";
+	cout << "Digite segunda nota ";
 	float b;
 	cin >> b;
 	float pm;
