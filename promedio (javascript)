@@ -2,9 +2,9 @@ var nom = prompt("Digite nombre del estudiante");
 var not1 = prompt("Digite primera nota del estudiante");
 var not2 = prompt("Digite segunda nota del estudiante");
 var pm = ((not1 + not2) / 2);
-alert("El promedio del estudiante " + nom) + (" es " + pm);
+alert("El promedio del estudiante " + nom + " es " + pm);
 if (pm >= 2.95) {
-  alert("El estudiante " + nom) + (" paso la materia");
+  alert("El estudiante " + nom + " paso la materia");
 } else {
-  alert("El estudiante " + nom) + (" perdio la materia");
+  alert("El estudiante " + nom + " perdio la materia");
 }
