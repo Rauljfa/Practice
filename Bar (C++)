@@ -9,39 +9,51 @@ using namespace::std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	int op, cant, cost;
+	int op, cant, cost = 0, mas = 1;
 	cout << "Menu: \n"; 
 	cout << "        1-Cerveza: $5000 \n";
 	cout << "        2-Vodka (750ml) : $45000 \n";
 	cout << "        3-Tequila (750ml): $30000 \n";
 	cout << "        4-Tapetuza (750ml): $15000 \n";
-	cout << "Que quieres comprar ? ";
-	cin >> op;
-	cout << "\n Cuantas quieres comprar ? ";
-	cin >> cant;
+	
 
-	switch (op)
+	while (mas == 1)
 	{
-	case 1:
-		cost = 5000 * cant;
-		break;
+		cout << "Que quieres comprar ? ";
+		cin >> op;
+		
+		cout << "\n Cuantas quieres comprar ? ";
+		cin >> cant;
+		
+	
+		switch (op)
+		{
+		case 1:
+			cost = cost + 5000 * cant;
+			break;
 
-	case 2:
-		cost = 45000 * cant;
-		break;
+		case 2:
+			cost = cost + 45000 * cant;
+			break;
 
-	case 3 :
-		cost = 30000 * cant;
-		break;
+		case 3:
+			cost = cost + 30000 * cant;
+			break;
 
-	case 4:
-		cost = 15000 * cant;
-		break;
+		case 4:
+			cost = cost + 15000 * cant;
+			break;
 
-	default:
-		cout << "\n Disculpa, no tenemos de eso aqui... ";
-		cost = 0;
-		break;
+		default:
+			cout << "\n Disculpa, no tenemos de eso aqui... ";
+			break;
+		}
+			cout << "\n Quiere mas ? (1 = si) ";
+			cin >> mas;
+			
+			
+			
+		
 	}
 
 	cout << "\n Eso te sale por $" << cost;
