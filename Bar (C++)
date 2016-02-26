@@ -1,66 +1,90 @@
-// Clase2.cpp: define el punto de entrada de la aplicación de consola.
-//
+// Clase2.cpp: define el punto de entrada de la aplicación de consola. 
+ // 
 
-#include "stdafx.h"
-#include "conio.h"
-#include <iostream>
 
-using namespace::std;
+ #include "stdafx.h"
+ #include "conio.h"
+ #include <iostream>
 
-int _tmain(int argc, _TCHAR* argv[])
+
+ using namespace::std;
+
+
+ int _tmain(int argc, _TCHAR* argv[])
 {
-	int op, cant, cost = 0, mas = 1;
-
+	 	int op, cant, cost = 0, mas = 1, ced = 1;
 	
-
-	while (mas == 1)
-	{
-		cout << "Menu: \n";
-		cout << "        1-Cerveza: $5000 \n";
-		cout << "        2-Vodka (750ml) : $45000 \n";
-		cout << "        3-Tequila (750ml): $30000 \n";
-		cout << "        4-Tapetuza (750ml): $15000 \n";
-		cout << "Que quieres comprar ? ";
-		cin >> op;
+		cout << "Tiene cedula ? (1 = si) \n";
+		cin >> ced;
 		
-		cout << "\n Cuantas quieres comprar ? ";
-		cin >> cant;
-		
-	
-		switch (op)
+		if(ced == 1)
 		{
-		case 1:
-			cost = cost + 5000 * cant;
-			break;
+			while (mas == 1)
+			{
+				cout << "Menu: \n";
+				cout << "        1-Cerveza: $5000 \n";
+				cout << "        2-Vodka (750ml) : $45000 \n";
+				cout << "        3-Tequila (750ml): $30000 \n";
+				cout << "        4-Tapetuza (750ml): $15000 \n";
+				cout << "Que quieres comprar ? ";
+				cin >> op;
 
-		case 2:
-			cost = cost + 45000 * cant;
-			break;
+				cout << "\n Cuantas quieres comprar ? ";
+				cin >> cant;
 
-		case 3:
-			cost = cost + 30000 * cant;
-			break;
 
-		case 4:
-			cost = cost + 15000 * cant;
-			break;
+				switch (op)
+				{
+				case 1:
+					cost = cost + 5000 * cant;
+					break;
 
-		default:
-			cout << "\n Disculpa, no tenemos de eso aqui... ";
-			break;
+
+				case 2:
+					cost = cost + 45000 * cant;
+					break;
+
+
+				case 3:
+					cost = cost + 30000 * cant;
+					break;
+
+
+				case 4:
+					cost = cost + 15000 * cant;
+					break;
+
+
+				default:
+					cout << "\n Disculpa, no tenemos de eso aqui... ";
+					break;
+				}
+				cout << "\n Quiere mas ? (1 = si) ";
+				cin >> mas;
+
+				cout << "\n Eso te sale por $" << cost;
+
+
+
+
+			}
 		}
-			cout << "\n Quiere mas ? (1 = si) ";
-			cin >> mas;
-			
-			
-			
+		else
+		{
+			cout << "\n No le podemos vender ";
+		}
+		 	
+	
+
+		 	
+	
+
+		 	_getch();
+	
+
 		
-	}
 
-	cout << "\n Eso te sale por $" << cost;
-
-	_getch();
-
-
-	return 0;
+		 	return 0;
 }
+
+
